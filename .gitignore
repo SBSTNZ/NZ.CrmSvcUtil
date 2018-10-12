@@ -1,0 +1,7 @@
+/CrmSvcUtil
+obj
+bin
+/packages
+/.vs
+/NZ.CrmSvcUtil/NZ.CrmSvcUtil.csproj.user
+/NZ.CrmSvcUtil/NZ.CrmSvcUtil.csproj.DotSettings

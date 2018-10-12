@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{025D9B99-538F-45C6-9481-C9645825BDE0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>NZ.CrmSvcUtil</RootNamespace>
+    <AssemblyName>NZ.CrmSvcUtil</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrmSvcUtil, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\coretools\CrmSvcUtil.exe</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Sdk, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\coretools\Microsoft.Xrm.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Tooling.Ui.Styles, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\coretools\Microsoft.Xrm.Tooling.Ui.Styles.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Strategy\CodeGenerationServiceBase.cs" />
+    <Compile Include="Strategy\Edm\CrmTypes\CrmCalendarRulesType.cs" />
+    <Compile Include="Strategy\Edm\CrmTypes\CrmCustomerType.cs" />
+    <Compile Include="Strategy\Edm\CrmTypes\CrmEntityNameType.cs" />
+    <Compile Include="Strategy\Edm\CrmTypes\CrmLookupType.cs" />
+    <Compile Include="Strategy\Edm\CrmTypes\CrmManagedPropertyType.cs" />
+    <Compile Include="Strategy\Edm\CrmTypes\CrmMemoType.cs" />
+    <Compile Include="Strategy\Edm\CrmTypes\CrmMoneyType.cs" />
+    <Compile Include="Strategy\Edm\CrmTypes\CrmOwnerType.cs" />
+    <Compile Include="Strategy\Edm\CrmTypes\CrmPartyListType.cs" />
+    <Compile Include="Strategy\Edm\CrmTypes\CrmPicklistType.cs" />
+    <Compile Include="Strategy\Edm\CrmTypes\CrmStateType.cs" />
+    <Compile Include="Strategy\Edm\CrmTypes\CrmStatusType.cs" />
+    <Compile Include="Strategy\Edm\CrmTypes\CrmUniqueIdentifierType.cs" />
+    <Compile Include="Strategy\Edm\CrmTypes\CrmVirtualType.cs" />
+    <Compile Include="Strategy\Edm\Design\EdmAssocation.cs" />
+    <Compile Include="Strategy\Edm\Design\EdmAssociationEnd.cs" />
+    <Compile Include="Strategy\Edm\Design\EdmComplexType.cs" />
+    <Compile Include="Strategy\Edm\Design\EdmDescription.cs" />
+    <Compile Include="Strategy\Edm\Design\EdmDocument.cs" />
+    <Compile Include="Strategy\Edm\Design\EdmEntity.cs" />
+    <Compile Include="Strategy\Edm\Design\EdmEntityProperty.cs" />
+    <Compile Include="Strategy\Edm\Design\EdmEnumType.cs" />
+    <Compile Include="Strategy\Edm\Design\EdmNavigationProperty.cs" />
+    <Compile Include="Strategy\Edm\Design\EdmScalarProperty.cs" />
+    <Compile Include="Strategy\Edm\EdmConstraintViolation.cs" />
+    <Compile Include="Strategy\Edm\CodeGenerationService.cs" />
+    <Compile Include="Strategy\JavaScript\CodeGenerationService.cs" />
+    <Compile Include="Strategy\Text\CodeGenerationService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="bin\coretools\CrmSvcUtil.exe.config" />
+    <None Include="bin\coretools\LicenseTerms.docx" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\coretools\CrmSvcUtil.exe" />
+    <Content Include="bin\coretools\CrmSvcUtil.xml" />
+    <Content Include="bin\coretools\Microsoft.Crm.Sdk.Proxy.dll" />
+    <Content Include="bin\coretools\Microsoft.IdentityModel.Clients.ActiveDirectory.dll" />
+    <Content Include="bin\coretools\Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms.dll" />
+    <Content Include="bin\coretools\Microsoft.Rest.ClientRuntime.dll" />
+    <Content Include="bin\coretools\Microsoft.Xrm.Sdk.Deployment.dll" />
+    <Content Include="bin\coretools\Microsoft.Xrm.Sdk.dll" />
+    <Content Include="bin\coretools\Microsoft.Xrm.Tooling.Connector.dll" />
+    <Content Include="bin\coretools\Microsoft.Xrm.Tooling.CrmConnectControl.dll" />
+    <Content Include="bin\coretools\Microsoft.Xrm.Tooling.Ui.Styles.dll" />
+    <Content Include="bin\coretools\Newtonsoft.Json.dll" />
+    <Content Include="bin\coretools\Other Redistributable.txt" />
+    <Content Include="bin\coretools\SolutionPackager.exe" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
